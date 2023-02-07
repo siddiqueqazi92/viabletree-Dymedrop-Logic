@@ -1,0 +1,2 @@
+ALTER TABLE pages
+ADD COLUMN `url` VARCHAR(200) DEFAULT NULL AFTER `is_published`;

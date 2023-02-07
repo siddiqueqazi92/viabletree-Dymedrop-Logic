@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dymedrop Invitation Link</title>
+    <style>
+        .visit{
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    Hello,
+
+    <p><b><%=sender%></b> invited you as a teammate on <%=title%> on DymeDrop. Use this link to accept: </p>
+    
+    
+        <% if (user == "creator") { %>
+            <a href="https://dymedrop-ddi7y.app.link/?creatordeeplink=creator/<%=pageId%>/<%=email%>/<%=ownerName%>" class="visit">
+            <%} else { %>
+                <%if (invitee == true) { %>
+                <a href="https://dymedrop-ddi7y.app.link/?creatordeeplink=teammate/<%=pageId%>/<%=email%>/<%=ownerName%>" class="visit">
+                    <% } else{ %>  
+                    <a href="https://dymedrop-ddi7y.app.link/?creatordeeplink=invitee/<%=pageId%>/<%=email%>/<%=ownerName%>" class="visit">
+                    <% } %> 
+            <% } %>    
+    <p>Accept Invite</p></a>
+
+    <p>Let us know if you need anything:</p>
+    
+    <p>Dymedrop Team</p>
+   <p><a href="mailto:help@dymedrop.com">help@dymedrop.com</p>
+</body>
+
+</html>
